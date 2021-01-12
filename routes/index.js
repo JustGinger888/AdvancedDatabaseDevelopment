@@ -12,4 +12,22 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
   })
 );
 
+router.get('/chat', ensureAuthenticated, (req, res) =>
+  res.render('chat', {
+    user: req.user
+  })
+);
+
+router.get('/drink', ensureAuthenticated, (req, res) =>
+  res.render('drink', {
+    user: req.user
+  })
+);
+
+router.get('/profile', ensureAuthenticated, (req, res) =>
+  res.render('profile', {
+    user: req.user
+  })
+);
+
 module.exports = router;

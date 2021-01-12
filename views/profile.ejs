@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/dashboard">CappuCoffee</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle
+        navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" id="home" href="/dashboard">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="drink" href="/drink">Drink</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" id="profile" href="/profile">Profile</a>
+            </li>
+            <li>
+                <a class="btn btn-secondary" href="/users/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-12 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label for="email">Name</label>
+                        <input type="name" id="name" name="name" class="form-control" placeholder="<%- user.name %> "
+                            value="<%= typeof name != 'undefined' ? name : '' %>" />
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="<%- user.email %> " value="<%=
+                                typeof email != 'undefined' ? email : '' %>" />
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <button class="btn btn-primary profile-button" type="button">Update Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

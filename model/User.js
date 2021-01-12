@@ -1,4 +1,3 @@
-  
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
@@ -17,6 +16,23 @@ const UserSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  drink: {
+    strength: {
+      type: Number,
+      min: 1,
+      max: 5
+    },
+    Description: {
+      type: String
+    }
+  },
+  groups: {
+    type: [[{
+      name: {
+        type: String
+      },
+    }]],
   }
 });
 
