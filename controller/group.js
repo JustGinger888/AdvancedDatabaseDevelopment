@@ -1,3 +1,2 @@
-module.exports = {
+const Group = require("../model/Group");
 
-}

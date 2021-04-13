@@ -29,6 +29,9 @@ const UserSchema = new mongoose.Schema({
   },
   groups: {
     type: [[{
+      id: {
+        type: String
+      },
       name: {
         type: String
       },

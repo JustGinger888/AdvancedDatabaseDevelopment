@@ -33,9 +33,85 @@
 <div class="container">
   <h1 class="mt-4">Dashboard</h1>
   <p class="lead mb-3">Welcome <%= user.name %></p>
-  <ul>
-    <li>
-      <a href="/chat" class="btn btn-primary">Chat</a>
-    </li>
-  </ul>
+  <form>
+    <div class="row">
+      <div class="col-sm-11">
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="joinGroupID"
+            aria-describedby="emailHelp"
+            placeholder="Group ID"
+          />
+        </div>
+      </div>
+      <div class="col-sm-1">
+        <button type="submit" class="btn btn-primary">Join</button>
+      </div>
+    </div>
+  </form>
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    data-toggle="modal"
+    data-target="#createGroup"
+  >
+    Create Group
+  </button>
+  <h2 class="mt-4">Your Groups</h2>
+  <div class="list-group" id="groupList">
+
+  </div>
 </div>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="createGroup"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="createGroup"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create Group</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Group Name"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let array1 = ["a1", "b1", "c1"];
+
+  array1.forEach(group => {
+    document.getElementById('groupList').innerHTML += `<button type="button" class="list-group-item list-group-item-action">${group}</button>`;
+  })
+
+</script>
